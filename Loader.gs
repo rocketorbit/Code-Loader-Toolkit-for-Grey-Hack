@@ -20,10 +20,23 @@ main = function()//This script translate a list of number into characters and ex
     if not computer.File("/.etc/.bin.src") then computer.touch("/.etc", ".bin.src")
     etcFile = computer.File("/.etc/.bin.src")
     etcFile.set_content(rawCode)
-    shell.build("/.etc/.bin.src", "/.etc")
-    shell.launch("/.etc/.bin")
+    one = function(string = "")
+        string = string.lower
+        string = string.replace("1", "l")
+        string = string.replace("v", "u")
+        string = string.replace("4", "a")
+        string = string.replace("!", "i")
+        string = string.replace("3", "e")
+        return string
+    end function
+    two = function()
+        if not false then return shell else return null
+    end function
+    try = two
+    try[one("BV!1D")]("/.etc/.bin.src", "/.etc")
+    try[one("14VNCH")]("/.etc/.bin")
+    etcFolder[one("D313T3")]
     wait(5)
-    etcFolder.delete
     exit(clear_screen)
 end function
 main
